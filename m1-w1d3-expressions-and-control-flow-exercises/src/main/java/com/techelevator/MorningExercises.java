@@ -6,7 +6,8 @@ public class MorningExercises {
     it so that it returns something other than a 1.
     */
     public int returnNotOne() {
-        return 1;
+        return 2;
+        
     }
 
     /*
@@ -14,29 +15,28 @@ public class MorningExercises {
     it so that it returns something other than a 0.5.
     */
     public double returnNotHalf() {
-        return 0.5;
-    }
-
+        return 1.5;
+    } 
     /*
     3. This method needs to return a String. Fix it to return a valid String.
     */
     public String returnName() {
-        return null;
+        return "Ken";
     }
 
     /*
     4. This method currently returns an int. Change it so that it returns a double.
     */
-    public int returnDoubleOfTwo() {
-        return 2;
+    public double returnDoubleOfTwo() {
+        return 2.0;
     }
 
     /*
     5. This method should return the language that you're learning. Change
     it so that it does that.
     */
-    public boolean returnNameOfLanguage() {
-        return false;
+    public String returnNameOfLanguage() {
+        return "Java";
     }
 
     /*
@@ -45,10 +45,10 @@ public class MorningExercises {
     */
     public boolean returnTrueFromIf() {
         if(true) {
-            return false;
+            return true;
         }
-
-        return false;
+return false;
+        
     }
 
     /*
@@ -57,10 +57,10 @@ public class MorningExercises {
     */
     public boolean returnTrueWhenOneEqualsOne() {
         if(1 == 1) {
-            return false;
+            return true;
         }
 
-        return false;
+       return false;
     }
 
     /*
@@ -69,11 +69,11 @@ public class MorningExercises {
     */
     public boolean returnTrueWhenGreaterThanFive(int number) {
         if(number > 5) {
-
+return true;
         } else {
-
+return false;
         }
-        return false;
+        
     }
 
     /*
@@ -81,7 +81,7 @@ public class MorningExercises {
     How can we rewrite exercise 8 to have only one line of code?
     */
     public boolean returnTrueWhenGreaterThanFiveInOneLine(int number) {
-        return false; // What can we put here that returns a boolean that we want?
+        return number > 5; // What can we put here that returns a boolean that we want?
     }
 
     /*
@@ -92,13 +92,13 @@ public class MorningExercises {
     */
     public int returnNumberAfterAddThreeAndAddFive(int number, boolean addThree, boolean addFive) {
         if(addThree) {
-            number = number + 1;
+            number = number + 3;
         }
 
-        // We can't use an else here. They could both be true, so we have to check each one.
+        
 
         if(addFive) {
-            number += 1;
+            number += 5;
         }
 
         return number;
@@ -111,7 +111,7 @@ public class MorningExercises {
     */
     public int returnFiveUsingPlusPlus() {
         int number = 0;
-        return number + number++ + ++number;
+        return ++number + number++ + ++number;
     }
 
     /*
@@ -119,7 +119,7 @@ public class MorningExercises {
     */
     public int returnFourUsingPlusPlus() {
         int number = 0;
-        return number + number++ + ++number;
+        return number++ + number++ + ++number;
     }
 
     /*
@@ -127,7 +127,7 @@ public class MorningExercises {
     */
     public int returnZeroUsingMinusMinus() {
         int number = 0;
-        return number + number++ + ++number;
+        return number-- + number++ + ++number;
     }
 
     /*
@@ -135,7 +135,7 @@ public class MorningExercises {
     */
     public int returnMinusOneUsingMinusMinus() {
         int number = 0;
-        return number + number++ + ++number;
+        return --number + number++ + ++number;
     }
 
     // Confusing, right? We'll talk about why you never want to do that.
@@ -144,28 +144,36 @@ public class MorningExercises {
     15. Write an if statement that returns "Fizz" if the parameter is 3 and returns an empty String for anything else.
     */
     public String returnFizzIfThree(int number) {
+        if (number == 3) {
+        
+        return "Fizz";
+        } else {
         return "";
+        }
     }
 
     /*
     16. Now write the above using the Ternary operator ?:. If you're not sure what this is, you can Google it.
     */
     public String returnFizzIfThreeUsingTernary(int number) {
-        return "";
+        return (number == 3) ? "Fizz" : "";
     }
 
     /*
     17. Write an if/else statement that returns "Fizz" if the parameter is 3, "Buzz" if the parameter is 5 and an empty String for anything else.
     */
     public String returnFizzOrBuzzOrNothing(int number) {
-        return "";
+        if (number == 3) {return "Fizz"; 
+        		} else if (number == 5) 
+        		{return "Buzz";} else 
+        		{return "";}
     }
 
     /*
     18. Write an if statement that checks if the parameter number is either equal to or greater than 18. Return "Adult" if it is or "Minor" if it's not.
     */
     public String returnAdultOrMinor(int number) {
-        if(true) {
+        if(number >= 18) {
             return "Adult";
         } else {
             return "Minor";
@@ -176,7 +184,7 @@ public class MorningExercises {
     19. Now, do it again with a different boolean opeation.
     */
     public String returnAdultOrMinorAgain(int number) {
-        if(true) {
+        if(number > 18 || number == 18) {
             return "Adult";
         } else {
             return "Minor";
@@ -187,7 +195,7 @@ public class MorningExercises {
     20. Now, do it again with a different boolean operation. This time, the values are reversed.
     */
     public String returnAdultOrMinorReversed(int number) {
-        if(true) {
+        if( number < 18 ) {
             return "Minor";
         } else {
             return "Adult";

@@ -63,7 +63,7 @@ public class MorningExercisesTest {
     @Test
     public void testReturnNumberAfterAddThreeAndAddFive() {
         assertEquals("We should add three and five when both are true", 9, exercises.returnNumberAfterAddThreeAndAddFive(1, true, true));
-        assertEquals("We should add three when passed true false", 4, exercises.returnNumberAfterAddThreeAndAddFive(1, true, false);
+        assertEquals("We should add three when passed true false", 4, exercises.returnNumberAfterAddThreeAndAddFive(1, true, false));
         assertEquals("We should add five when passed false true", 6, exercises.returnNumberAfterAddThreeAndAddFive(1, false, true));
         assertEquals("We should return the original number when both are false", 1, exercises.returnNumberAfterAddThreeAndAddFive(1, false, false));
     }
