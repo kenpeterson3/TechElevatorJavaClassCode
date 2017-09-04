@@ -42,11 +42,11 @@ public class TempConvert {
 		
 		
 		if(fOrC.toUpperCase().startsWith("F")) {
-			int resultTempF = (int)(( temp - 32) / 1.8);
-			return resultTempF;
-		} else {
-			int resultTempC = ((int)(temp * 1.8 + 32));
+			int resultTempC = (int)(( temp - 32) / 1.8);
 			return resultTempC;
+		} else {
+			int resultTempF = ((int)(temp * 1.8 + 32));
+			return resultTempF;
 		}
 	}
 }
