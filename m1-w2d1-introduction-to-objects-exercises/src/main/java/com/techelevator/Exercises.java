@@ -248,16 +248,17 @@ public class Exercises {
 	 twoChar("java", 3) → "ja"
 	 */
 	public String twoChar(String str, int index) {
-		if ((str.length() - index) > 1){
-			return str.substring(index, index + 1);
-		} else {
-			return str.substring(0, 2);
-		}
 		
-		}
+	int strLength = str.length();
 	
+	if (index >= 0 && (index + 2 <= strLength)){
+		return str.substring(index, index + 2);
+		
+	} else {
+		return str.substring(0, 2);
 	
-
+	}
+	}
 	/*
 	 Given a string of odd length, return the string length 3 from its middle, so "Candy" yields "and". 
 	 The string length will be at least 3.
@@ -434,7 +435,24 @@ public class Exercises {
 	 stringX("xabxxxcdx") → "xabcdx"
 	 */
 	public String stringX(String str) {
-		return null;
+		String stringX = "";
+		
+		
+		
+		if (str.length() <= 1) {
+			return str;
+		} else {
+			stringX += str.charAt(0);
+			for (int i = 1; i < str.length() -1; i++){
+				if (str.charAt(i) != 'x'){
+					stringX = stringX + str.charAt(i);				
+				}
+			}	
+			
+		}
+		stringX += str.charAt(str.length()-1);
+			
+			return stringX;
 	}
 
 	/*
@@ -444,7 +462,24 @@ public class Exercises {
 	 altPairs("CodingHorror") → "Congrr"
 	 */
 	public String altPairs(String str) {
-		return null;
+		String altPairs = "";
+		
+		//altPairs += str.charAt(0);
+		//altPairs += str.charAt(1);
+		
+        for (int i = 0; i < str.length(); i += 4)	{
+        	
+        	altPairs += str.charAt(i );
+        	
+        		if (i + 1 >= str.length()){
+        			return altPairs;
+        		}
+        	
+    		altPairs += str.charAt(i + 1);
+    			
+        }
+	
+		return altPairs;
 	}
 
 	/*
@@ -455,7 +490,10 @@ public class Exercises {
 	 stringYak("yak123ya") → "123ya"
 	 */
 	public String stringYak(String str) {
-		return null;
+		
+		
+		
+		return str.replace("yak", "");
 	}
 	
 }
