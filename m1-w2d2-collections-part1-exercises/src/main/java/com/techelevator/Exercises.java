@@ -22,7 +22,16 @@ public class Exercises {
 	 array2List( {"Left", "Right", "Forward", "Back"} )  ->  ["Left", "Right", "Forward", "Back"] 
 	 */
 	public List<String> array2List(String[] stringArray) {
-		return null;
+		
+		
+		List<String> array2List = new ArrayList<String>();
+		
+		for (String fruit: stringArray){
+			array2List.add(fruit);
+		}
+		
+		
+		return array2List;
 	}
 	
 	/*
@@ -32,7 +41,10 @@ public class Exercises {
 	 list2Array( ["Left", "Right", "Forward", "Back"] )  ->  {"Left", "Right", "Forward", "Back"}
 	 */
 	public String[] list2Array(List<String> stringList) {
-		return null;
+		
+		String[] list2Array = stringList.toArray(new String[stringList.size()]);
+		
+		return list2Array;
 	}
 	
 	/*
@@ -43,7 +55,18 @@ public class Exercises {
 	 no4LetterWords( {"Jack", "Jill", "Jane", "John", "Jim"} )  ->  ["Jim"]
 	 */
 	public List<String> no4LetterWords(String[] stringArray) {
-		return null;
+		
+		List<String> no4LetterWords = new ArrayList<String>();
+		
+		for (String words: stringArray){
+			if (words.length() != 4 ){
+				
+				no4LetterWords.add(words);
+			}
+			
+		}
+		
+		return no4LetterWords;
 	}
 
 
@@ -56,17 +79,33 @@ public class Exercises {
 		-> ["way", "the", "all", "jingle", "bells", "jingle", "bells", "jingle"]
 	 */
 	public List<String> reverseList(List<String> stringList) {
-		return null;
+		
+		Stack<String> stackList =  new Stack<String>();
+		List<String> myStringList = new ArrayList<String>();
+		stackList.addAll(stringList);
+		
+		for (String popColors: stringList){//why not stackList???
+			myStringList.add(stackList.pop());
+		}
+		
+		return myStringList;
 	}
-
 	/*
-	 Given an array of ints, divide each int by 2, and return an ArrayList of Doubles.
-	 arrayInt2ListDouble( {5, 8, 11, 200, 97} ) -> [2.5, 4.0, 5.5, 100, 48.5]
-	 arrayInt2ListDouble( {745, 23, 44, 9017, 6} ) -> [372.5, 11.5, 22, 4508.5, 3]
-	 arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
-	 */
+	Given an array of ints, divide each int by 2, and return an ArrayList of Doubles.
+	arrayInt2ListDouble( {5, 8, 11, 200, 97} ) -> [2.5, 4.0, 5.5, 100, 48.5]
+	arrayInt2ListDouble( {745, 23, 44, 9017, 6} ) -> [372.5, 11.5, 22, 4508.5, 3]
+	arrayInt2ListDouble( {84, 99, 3285, 13, 877} ) -> [42, 49.5, 1642.5, 6.5, 438.5]
+	*/	
+		
 	public List<Double> arrayInt2ListDouble(int[] intArray) {
-		return null;
+		
+		List<Double> dividedDoubles = new ArrayList<Double>();
+		
+		for (Integer willDivide: intArray) {
+			dividedDoubles.add(willDivide /2.0 );
+		}
+		
+		return dividedDoubles;
 	}
 	
 	/*
@@ -76,7 +115,9 @@ public class Exercises {
 	 findLargest( [34070, 1380, 81238, 7782, 234, 64362, 627] ) -> 64362
 	 */
 	public Integer findLargest(List<Integer> integerList) {
-		return null;
+		
+	
+		return Collections.max(integerList);
 	}
 	
 	/*
@@ -86,7 +127,18 @@ public class Exercises {
 	 oddOnly( {734, 233, 782, 811, 3, 9999} ) -> [233, 811, 3, 9999]  
 	 */
 	public List<Integer> oddOnly(Integer[] integerArray) {
-		return null;
+		
+		List<Integer> onlyOdds = new ArrayList<Integer>();
+		
+		for (Integer modTheOdds: integerArray){
+			
+			if (modTheOdds % 2 != 0){
+				onlyOdds.add(modTheOdds);
+			}
+			
+		}
+		
+		return onlyOdds;
 	}
 	
 	/* 
@@ -97,6 +149,19 @@ public class Exercises {
 	 foundIntTwice( [9, 23, 44, 2, 88, 44], 44) -> true
 	 */
 	public boolean foundIntTwice(List<Integer> integerList, int intToFind) {
+		int count = 0;
+		
+		for (Integer findTwice: integerList ){
+			if (intToFind == findTwice){
+				count = count + 1;
+				
+				
+			}
+		}
+		if (count == 2){
+			return true;
+		}
+		
 		return false;
 	}
 	
@@ -113,7 +178,22 @@ public class Exercises {
 	 HINT: To convert an integer x to a string you can call x.toString() in your code (e.g. if x = 1 then x.ToString() equals "1")
 	 */
 	public List<String> fizzBuzzList(Integer[] integerArray) {
-		return null;
+		
+		List<String> fizzBuzzList = new ArrayList<String>();
+		
+		for (Integer checkForFizzBuzz: integerArray){
+			if (checkForFizzBuzz % 3 == 0 && checkForFizzBuzz % 5 == 0){
+				fizzBuzzList.add("FizzBuzz");
+			} else if (checkForFizzBuzz % 3 == 0){
+				fizzBuzzList.add("Fizz");
+			} else if (checkForFizzBuzz % 5 == 0){
+				fizzBuzzList.add("Buzz");
+			} else {
+				fizzBuzzList.add(checkForFizzBuzz.toString());
+			}
+		}
+		
+		return fizzBuzzList;
 	}
 
 	/*
@@ -123,7 +203,17 @@ public class Exercises {
 	 distinctValues( ["jingle", "bells", "jingle", "bells", "jingle", "all", "the", "way"] ) -> ["jingle", "bells", "all", "the", "way"]
 	 */
 	public List<String> distinctValues(List<String> stringList) {
-		return null;
+		
+		Set<String> noDuplicates = new HashSet<String>();
+		List<String> printThis = new ArrayList<String>();
+ 		
+		noDuplicates.addAll(stringList);
+		
+		printThis.addAll(noDuplicates);
+		
+		//System.out.println(noDuplicates);
+		
+		return printThis;
 	}
 
 	/*
