@@ -1,6 +1,8 @@
 package com.techelevator;
 
+import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class Exercises {
 
@@ -34,7 +36,27 @@ public class Exercises {
 	 * 
 	 */
 	public String animalGroupName(String animalName) {
-		return null;
+		
+		Map<String, String> animalGroupName = new TreeMap<String, String>(String.CASE_INSENSITIVE_ORDER);
+		
+		animalGroupName.put("Rhino", "Crash");
+		animalGroupName.put("Giraffe", "Tower");
+		animalGroupName.put("Elephant", "Herd");		
+		animalGroupName.put("Lion", "Pride");
+		animalGroupName.put("Crow", "Murder");
+		animalGroupName.put("Pigeon","Kit");
+		animalGroupName.put("Flamingo","Pat");
+		animalGroupName.put("Deer", "Herd");
+		animalGroupName.put("Dog", "Pack");
+		animalGroupName.put("Crocodile", "Float");
+		//System.out.println(animalGroupName);
+		//for (String  : )
+		
+		if (!animalGroupName.containsKey(animalName)){
+			return "unknown";
+		}
+		
+		return animalGroupName.get(animalName);
 	}
 
 	/*
@@ -60,7 +82,21 @@ public class Exercises {
 	 * 
 	 */
 	public Double isItOnSale(String itemNumber) {
-		return null;
+		
+		Map<String, Double> isItOnSale = new HashMap<>();
+		
+		isItOnSale.put("KITCHEN4001", 0.20);
+		isItOnSale.put("GARAGE1070", 0.15);
+		isItOnSale.put("LIVINGROOM", 0.10);
+		isItOnSale.put("KITCHEN6073", 0.40);
+		isItOnSale.put("BEDROOM3434", 0.60);
+		isItOnSale.put("BATH0073", 0.15);
+		
+		if (isItOnSale.containsKey(itemNumber.toUpperCase())){
+			return isItOnSale.get(itemNumber.toUpperCase());
+		}
+		
+		return 0.00;
 	}
 	
 	/*
@@ -74,7 +110,28 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
-		return null;
+		
+		int peterMoney = peterPaul.get("Peter");
+		int paulMoney = peterPaul.get("Paul");
+		
+		if (peterMoney > 0 && paulMoney < 1000){
+			if (peterMoney % 2 != 0) {
+				peterMoney = peterMoney / 2;
+				paulMoney = peterMoney + paulMoney;
+				peterMoney++;
+			}else if (peterMoney > 0 && paulMoney < 1000) {
+				peterMoney = peterMoney / 2;
+				paulMoney = peterMoney + paulMoney;
+			}else{ 
+				return peterPaul;
+			}
+			
+		}
+		
+		peterPaul.put("Peter", peterMoney);
+		peterPaul.put("Paul", paulMoney);
+		
+		return peterPaul;
 	}
 	
     /*
@@ -87,7 +144,25 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
-		return null;
+		
+		int peterMoney = peterPaul.get("Peter");
+		int paulMoney = peterPaul.get("Paul");
+	
+		
+		if ( peterMoney >= 5000 && paulMoney >= 10000) {
+			int peterPaulPartnershipPeter = peterMoney / 4;
+			peterMoney = peterMoney - peterPaulPartnershipPeter;
+			int peterPaulPartnershipPaul = paulMoney / 4;
+			paulMoney = paulMoney - peterPaulPartnershipPaul;
+			int total = peterPaulPartnershipPaul + peterPaulPartnershipPeter;
+			peterPaul.put("Peter", peterMoney);
+			peterPaul.put("Paul", paulMoney);
+			peterPaul.put("PeterPaulPartnership", total);
+			return peterPaul;
+		}else{
+		
+		return peterPaul;
+		}
 	}
 	
 	/*
@@ -99,6 +174,8 @@ public class Exercises {
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
 	public Map<String, String> beginningAndEnding(String[] words) {
+		
+		
 		return null;
 	}
 	
@@ -114,7 +191,21 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
+		
+		Map<String, Integer> counts = new HashMap<>();
+		
+		for (String word : words) {
+			if(counts.containsKey(word)) {
+				int currentCount = counts.get(word);
+				currentCount++;
+				counts.put(word,  currentCount) ;
+			} else {
+				counts.put(word, 1);
+			}
+			
+		}
+			
+		return counts;
 	}
 	
 	/*
@@ -129,6 +220,9 @@ public class Exercises {
 	 * 
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
+	
+		
+		
 		return null;
 	}
 	
@@ -176,5 +270,23 @@ public class Exercises {
 	 */
 	public Map<String, Integer> last2Revisted(String[] words) {
 		return null;
+		
+		
 	}
+	//last 2 string solution from 2 days ago...by Joe
+//	public int last2(String str) {
+//		
+//		if(str.length() <= 2) {
+//			return 0;
+//		}
+//	String lastTwo = str.substring(str.length() - 2);
+//	
+//	int count = 0;
+//	for (int i = 0; i < str.length() - 2; i++) {
+//		if(str.substring(i, i+2).equals(lastTwo)) {
+//			count++;
+//		}
+//	}
+//	return count;
+//	}
 }
