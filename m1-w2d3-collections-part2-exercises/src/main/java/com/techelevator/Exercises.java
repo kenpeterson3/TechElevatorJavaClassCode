@@ -265,8 +265,26 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse, Map<String, Integer> remoteWarehouse) {
-		return null;
-	}
+		
+	
+    Map<String, Integer> newMap = new HashMap<>();
+    
+    for (String name : mainWarehouse.keySet()){
+        if(remoteWarehouse.containsKey(name)){
+            newMap.put(name, (mainWarehouse.get(name) + remoteWarehouse.get(name)));
+        } else {
+        	newMap.put(name, mainWarehouse.get(name));
+        }
+    }
+    for (String name : remoteWarehouse.keySet()) {
+    	if (!(mainWarehouse.containsKey(name))) {
+    		newMap.put(name, remoteWarehouse.get(name));
+    	}
+    }
+    return newMap;        
+}
+		
+
 
 	/*
 	 * Just when you thought it was safe to get back in the water --- last2Revisited!!!!
