@@ -161,11 +161,18 @@ public class Exercises {
 	 * beginningAndEnding(["man", "moon", "main"]) → {"m": "n"}
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
-	public Map<String, String> beginningAndEnding(String[] words) {
+	public Map<String, String> beginningAndEnding(String[] words) { 
+		
+		Map<String, String> keyValue = new HashMap<>();
+		
+		for (String strings : words){
+							
+			keyValue.put(strings.substring(0, 1), strings.substring(strings.length() -1))	;		
+		}
 		
 		
 		
-		return null;
+		return keyValue;
 	}
 	
 	/*
@@ -302,6 +309,17 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Integer> last2Revisted(String[] words) {
+		
+		Map<String, Integer> keyAndCount = new HashMap<>();
+		
+		
+		for (String key : words) {
+			if (words.length <= 2) {
+				keyAndCount.put(key, 0);
+				keyAndCount.put(key + 1, 0);
+			}
+		}
+		
 		return null;
 		
 		
