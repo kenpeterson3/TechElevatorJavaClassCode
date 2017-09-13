@@ -46,4 +46,10 @@ Airplane sut;
 		assertEquals(0,sut.getAvailableCoachSeats());
 		assertEquals(true,sut.reserveSeats(true, 1));
 	}
+	@Test
+	public void testReserve() {
+		assertEquals(false,sut.reserveSeats(true, 18));
+		assertEquals(false,sut.reserveSeats(false, 43));
+	}
+	
 }
