@@ -15,7 +15,9 @@ public class Employee {
 	}
 	// methods		
 	public void raiseSalary(double percent) {
+		if (percent > 0){
 		annualSalary = annualSalary * (1.0 + (percent/ 100));
+		}
 	}	
 	//getters and setters	
 	public String getFullName() { //derived attribute

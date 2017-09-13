@@ -37,8 +37,7 @@ public class Airplane {
 				return true;
 			} else {
 			return false;
-		} //else {
-			//return false;
+			} 
 		}
 	}
 	//getters
