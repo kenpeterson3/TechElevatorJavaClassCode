@@ -1,5 +1,6 @@
 package com.techelevator;
 
+<<<<<<< HEAD
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
@@ -36,6 +37,12 @@ public class FizzWriter {
 			System.out.println("");
 			System.exit(1);
 		}
+=======
+public class FizzWriter {
+
+	public static void main(String[] args) {
+		
+>>>>>>> cf066afe3968b53edb46740624ccd61268edf103
 
 	}
 

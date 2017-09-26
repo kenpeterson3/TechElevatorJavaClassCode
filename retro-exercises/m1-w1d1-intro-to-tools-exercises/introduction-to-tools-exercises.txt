@@ -1,0 +1,278 @@
+Introduction to Tools Exercises
+-------------------------------
+
+The following exercises cover Git, and several Unix commands typically used
+alongside Git. They are intended to help you gain familiarity and build 
+confidence while on the command line inside the Terminal.
+
+The exercise folder contains this file, plus a java-helloworld folder.  The
+java-helloworld folder represents a simplified Java project. (The layout of an
+actual Java project will be covered in later lectures.) For now, the reduced 
+structure provides an opportunity to navigate between folders, and to work with
+files as you would in an actual Java project, but cleared of much of the 
+clutter found in real projects.
+
+
+----
+1.  To begin, open your terminal, and enter the following command to change 
+    directory to the exercise folder.
+----
+
+$ cd ~/workspace/exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld
+
+Note, do not enter the beginning "$" character. It represents the prompt for 
+the command line. This convention is commonly used to visually separate the 
+actual command from other text in Unix documentation.
+
+
+----
+2.  What does the ~ (tilde) character in the above command to change directory 
+    refer to?
+----
+
+
+----
+3.  A good habit to develop, especially while you're developing your skills on 
+    the command line, is to confirm your location after changing directories. 
+    This can be easily accomplished with the "pwd" command.
+----
+
+$ pwd
+<type or copy-paste the result here>
+
+The present working directory displayed should match the directory you changed 
+to in Exercise 1.  Note, the two may not match at the very beginning if you
+used the tilde when changing directories.  The tilde is a convenience to save 
+you some typing.  The system resolves the tilde to the full location as it
+changes directory, and the "pwd" command reflects this.
+
+
+----
+4.  Display a list of all the files and folders in your present working 
+    directory. Include all dot-files and dot-folders.  Recall the "all" and
+    "long format" flags for the "ls" command.
+----
+
+$ ls -la
+<type or copy-paste the result here>
+
+
+----
+5.  What do the "." and ".." folders displayed in the directory listing in
+    Exercise 4 represent?
+----
+
+<type or copy-paste your answer here>
+
+----
+6.  What are the names of the files, including any dot-files, displayed in the
+    directory listing in Exercise 4?
+----
+
+<type or copy-paste your answer here>
+
+
+----
+7.  What are the names of the folders, including any dot-folders, displayed in 
+    the directory listing in Exercise 4?
+----
+
+<type or copy-paste your answer here>
+
+
+----
+8.  pom.xml is a Maven build file. You will learn more about Maven in later 
+    lectures. As for the exercise, it is sometimes necessary, and usually 
+    always interesting to be able to view the contents of files while at the
+    command line. A friendly and easy-to-use utility that allows you to do this
+    is "less".  
+    
+    "less" has two great features. First, it is a file viewer. You never have 
+    to worry about accidentally modifying the file, as you would if you opened it 
+    in an editor.  Second, it allows you to page-up, page-down, search, and 
+    perform other nifty navigations which are really useful when files are big.
+
+    View pom.xml using "less".  
+
+    Or, for the more adventuresome, you might want to try using "less" with a huge
+    file like database/pagila.sql where the utility's navigation features really
+    shine.
+
+    Press Q to quit when you wish to stop viewing either of the files.
+----
+
+$ less pom.xml
+
+Or
+
+$ less database/pagila.sql
+
+You are encouraged to make "less" part of your standard command line toolkit.
+
+
+----
+9.  This is good time to make a Git snapshot of your progress.  Usually, 
+    you'll want to check the Git status to review the list of files that
+    have been changed, added, or deleted.  Then you'll want to add and commit
+    those changes to your local repository.
+
+    Don't forget to save your current changes to this text file to disk before
+    making the snapshot.
+----
+
+Did you remember to save "m1-introduction-to-tools-exercise.txt"?
+
+$ git status
+<type or copy-paste the result here>
+
+$ git add .
+<type or copy-paste the result here>
+
+$ git commit -m "Good stopping point"
+<type or copy-paste the result here>
+
+Note, you do not need to push this commit up to BitBucket. The typical Git 
+workflow is to many small commits to your local repo, with pushes up to 
+BitBucket when a feature, fix, or in this case, assignment is finished.  
+
+
+----
+10.  Change into src/main/java/com/techelevator directory under java-helloworld.
+    Show your present working directory after the change.
+----
+
+$ cd src/main/java/com/techelevator
+$ <enter command to display present working directory>
+<type or copy-paste your present working directory here>
+
+
+----
+11. Does the change directory command in Exercise 9 use a relative, or absolute
+    path?
+----
+
+<type your answer here>
+
+
+----
+12. List all the files and folders, including any dot-files or dot-folders in
+    your present working directory.
+----
+
+$ <enter command to list all files and folders including dot-files and dot-folders>
+<type or copy-paste the result here>
+
+
+----
+13. "Helloworld.java" is the sole source code file of the Helloworld application.
+    Make a backup of the file named "Helloworld.java.backup" using the copy 
+    command.
+----
+
+$ cp Helloworld.java Helloworld.java.backup
+
+The "cp" parameters are the name of the source file followed by the name of the 
+destination file. 
+
+$ <enter command to list all files and folders in order to confirm the creation of the backup file>
+<type or copy-paste the result here>
+
+
+----    
+14. Rename "Helloworld.java.backup" to "Helloworld.java.copy" using the move 
+    command. (There is no rename command in UNIX.)
+----
+
+$ mv Helloworld.java.backup Helloworld.java.copy
+
+The "mv" parameters are the existing name of the file followed by the new name 
+of the file. 
+
+$ <enter command to list all files and folders in order to confirm the renaming of the file>
+<type or copy-paste the result here>
+
+
+----
+15. Let's call this a "feature completion" point in the exercises, and not only
+    commit to the local repository, but also push it up to BitBucket. 
+----
+
+$ <enter the Git command to display status>
+<type or copy-paste the result here>
+
+$ <enter the Git command to "stage" all changes>
+<type or copy-paste the result here>
+
+$ <enter the Git command to save all "staged" changes>
+<type or copy-paste the result here>
+
+$ git push
+<type or copy-paste the result here>
+
+
+----
+16. Delete the backup file, "Helloworld.java.copy" using the remove command.
+----
+
+$ rm Helloworld.java.copy
+
+The "rm" parameter is the name of the file to be deleted.
+
+$ <enter command to list all files and folders in order to confirm the file deletion>
+<type or copy-paste the result here>
+
+
+----
+17. Change directory to the java-helloworld folder using either one of the 
+    commands shown below.
+----
+
+$ cd ../../../../../
+
+or
+
+$ cd ~/workspace/exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld
+
+Note the first alternative relies upon the ".." parent folder notation.  In 
+essence it says to change directory from the current folder's parent's parent's
+parent's parent's parent.  You'll know you're getting comfortable at the
+command line when that seems natural.
+
+Regardless of the option you chose, check your new location.
+
+$ <enter command to display present working directory>
+<type or copy-paste your present working directory here>
+
+
+----
+18. Create a documentation folder named "docs" under java-helloworld, and then
+    change into it.
+----
+
+$ mkdir docs
+$ <enter the command to change directory to "docs" using a relative path>
+$ <enter command to display present working directory>
+<type or copy-paste your present working directory here>
+
+----
+19. Create a new file name "readme.txt" using Visual Studio Code, and add the text
+    "Hello, this is the beginning of the application's documentation."
+----
+
+$ code readme.txt
+
+Don't forget to save the file in Visual Studio Code!
+
+
+----
+20. As a final exercise, please perform the following commands to save and push your 
+    work so it can be reviewed by an instructor.
+----
+
+$ <enter the Git command to display status>
+
+$ <enter the Git command to "stage" all changes>
+
+$ <enter the Git command to save all "staged" changes>
+
+$ <enter the Git command to save local repository to BitBucket>
