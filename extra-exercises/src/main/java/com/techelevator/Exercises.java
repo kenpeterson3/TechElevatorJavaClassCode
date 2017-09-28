@@ -1,7 +1,10 @@
 package com.techelevator;
 
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 public class Exercises {
 
@@ -11,8 +14,8 @@ public class Exercises {
     arrayDeduplication([]) → []        
     arrayDeduplication([1, 1, 1]) → [1]
     */
-    public int[] arrayDeduplication(int[] nums) {
-        return null;
+    public int[] arrayDeduplication(int[] nums) { 
+    	return Arrays.stream(nums).distinct().toArray();
     }
     
     /*
