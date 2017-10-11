@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -27,7 +28,19 @@ public class Exercises {
         arrayIntersection([], []) → []
     */
     public int[] arrayIntersection(int[] a, int[] b) {
-        return null;
+    	
+    	int[] intersectionAB = null;
+    	
+    	for (int tempA: a) {
+    		for (int i = 0;i <= b.length; i++) {
+    			if (tempA == i) { 
+    				Array.getInt(intersectionAB, i);
+    			}
+    		}
+    		
+    	}
+    	
+        return intersectionAB;
     }
     
     /*
