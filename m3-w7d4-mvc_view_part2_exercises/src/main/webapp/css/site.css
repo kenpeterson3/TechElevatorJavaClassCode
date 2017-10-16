@@ -56,3 +56,113 @@ section {
 	background-color: #FFF;
 	border-radius: 7px;
 }
+.footer {
+	color: #8ab436;
+	text-align: center;
+}
+.productImage {
+	width: 80%;
+}
+.rating {
+	width: 80%;
+}
+tr.gray {
+	background-color: #c9c9c9;
+}
+
+tr.gray > th {
+	background-color: white;
+	grid-auto-rows: 100%;
+	max-width: 50%;
+}
+.price {
+	color: #fb423d;
+}
+#productTable {
+	border-collapse: collapse;
+
+}
+.flexContainer {
+	display: flex
+	
+	
+}
+
+.flexContainerTile{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-left: 4px;
+}
+
+.tanSpace {
+	background-color: #E0EABC;
+	width: 80%;
+	min-height: 100px
+}
+
+.flexContainerText {
+	display: flex;
+	justify-content: space-between;
+	align-self: flex-end;
+}
+
+.flexContainerName {
+	display: flex;
+	align-self: flex-end;
+}
+.masterContainer {
+	display: flex;
+}
+#description {
+	text-align: bottom;
+}
+.ratingTiles{
+	height: 20px;
+	width: 60%;
+}
+.blue {
+	color: blue;
+}
+.red {
+	color: red;
+}
+.productImageList {
+	width: 200px;
+	height: 150px;
+	align-items: left;
+	
+}
+.link a{
+	text-decoration: none;
+	color: black;
+}
+.containerList {
+	display: flex;
+	width:100%;
+}
+.containerListPics {
+	display: block;
+	height: 100%;
+	width: 30%;
+}
+.containerListInfo {
+	display: block;
+	height: 100%;	
+	width: 70%;	
+	text-align: left;	
+}
+.ratingTilesList{
+	height: 20px;
+}
+.productDetailsMain{
+	display: flex;
+	width: 100;
+}
+.containerDetailsPics{
+	
+	display: block;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}

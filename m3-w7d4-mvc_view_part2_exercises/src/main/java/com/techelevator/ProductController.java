@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class ProductController {
 
-	@RequestMapping("/productList")
+	@RequestMapping({"/","/productList"})
 	public String showProductList(ModelMap modelHolder) {
 		modelHolder.put("products", getProducts());
 		return "productList";
@@ -38,6 +38,9 @@ public class ProductController {
 		}
 		return "productDetail";
 	}
+	
+
+	
 	
 	private List<Product> getProducts() {
 		List<Product> products = new ArrayList<Product>();
