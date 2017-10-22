@@ -13,7 +13,9 @@
         label {
             display: block;
         }
-
+		.error {
+			color: red;
+		}
         .form-control {
             display: inline-block;
         }

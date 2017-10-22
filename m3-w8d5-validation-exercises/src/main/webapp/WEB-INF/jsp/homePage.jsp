@@ -1,9 +1,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <c:set var="pageTitle" value="Home Page"/>
 <%@include file="common/header.jspf" %>
 
-<h2>Index</h2>
+<h2>Homet Pagum</h2>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam a odio lobortis, 
 rhoncus mauris dignissim, tristique lectus. Morbi risus ex, pulvinar tincidunt lacus placerat, 

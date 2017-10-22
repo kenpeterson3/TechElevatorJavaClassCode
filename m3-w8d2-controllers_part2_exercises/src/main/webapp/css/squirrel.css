@@ -1,0 +1,51 @@
+h1 {
+    font-size: 22px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+     text-align: center;
+}
+section.centeredPanel {
+    clear: both;
+    display: block;
+    width: 90%;
+    vertical-align: top;
+    min-height: 450px;
+    background-color: #FFF;
+    border-radius: 7px;
+    margin: 20px auto;
+    overflow: auto;
+}
+
+    section.centeredPanel h2 {
+        color: #000000;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    section.centeredPanel p {
+        color: #000;
+        text-align: left;
+    }
+
+.centered {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+img {
+	width:30%
+	height:30%
+}
+.error {
+	color:red;
+}
+.required{
+	color:red;
+}
+.copyright{
+	text-align: centered;
+	color: gray;
+}
