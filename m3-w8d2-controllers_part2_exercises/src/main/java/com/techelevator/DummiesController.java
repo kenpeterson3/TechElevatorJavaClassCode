@@ -48,7 +48,7 @@ public class DummiesController {
 		
 		if(result.hasErrors()) {
 			flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "review", result);
-			return "redirect:/login";
+			return "redirect:/newReview";
 		}
 		newReview.setDateSubmitted(LocalDateTime.now());
 		reviewDao.save(newReview);
