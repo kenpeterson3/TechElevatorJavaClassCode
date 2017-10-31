@@ -8,6 +8,18 @@ import java.util.List;
 import java.util.Set;
 
 public class Exercises {
+	import java.util.Arrays;
+
+	public class Kata {
+	    public String  findShort(String s) {
+	        String shortest;
+	        int[] a = s.split(" ");
+	        for (int i = 0; i < a.length(); a++)
+	        if (shortest.length() > a[i].length()){
+	        shortest = a[i];   
+	    }
+	    return shortest;
+	}
 
     /*
     Given an integer array, return the array with all of the duplicate values removed.
