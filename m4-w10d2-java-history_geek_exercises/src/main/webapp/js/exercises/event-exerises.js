@@ -21,7 +21,22 @@ $(document).ready(function () {
 		$('#grandtotal > .price').text('$' + (parseFloat(checkShipping) + parseFloat(subttl)).toFixed(2));
 		
 	});
+	
 
 });
 
+function grandTotal(){
+    var subtotal = $('#subtotal span').text();
+    subtotal = parseFloat(subtotal.substring(1, subtotal.length));
+    
+    var tax = $('#tax span').text();
+    tax = parseFloat(tax.substring(1, tax.length));
+    
+    var shipping = $('#shipping span').text();
+    shipping = parseFloat(shipping.substring(1, shipping.length));
+    
+    var grandTotal = subtotal + tax + shipping;
+    $('#order-summary #grandtotal span').text('$' + grandTotal);
+    
+}
 
