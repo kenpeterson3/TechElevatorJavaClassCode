@@ -1,0 +1,51 @@
+header h1 {
+	display : inline;
+}
+
+.content {
+	padding-left : 1em;
+}
+
+.message {
+	font-size : 14pt;
+}
+
+.message-list {
+	list-style-type : none;
+	padding : 0;
+}
+
+.message-list li {
+	padding : .5em 0 .5em 0;
+}
+
+.message .username {
+	font-weight : bold;
+	margin-right : 1em;
+}
+
+.message .timeago {
+	margin-left : 1em;
+	font-style : italic;
+	color : #c0c0c0;
+	padding : 0 .3em 0 .3em;
+	border-left : 1px solid #c0c0c0;
+	border-right : 1px solid #c0c0c0;
+}
+
+footer {
+	text-align : center;
+}
+
+.to {
+	background-color : #f0f0f0;
+}
+
+.error {
+	color : red;
+}
+
+#currentUser {
+	text-align : right;
+	font-weight : bold;
+}
